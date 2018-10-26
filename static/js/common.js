@@ -63,7 +63,7 @@ function getPara(name) {
 window.onload = function () {
   var scrbox = document.createElement('script');
   scrbox.type = 'text/javascript'
-  scrbox.innerHTML = 'var _mtac = {};(function() {var mta = document.createElement("script");mta.src = "http://pingjs.qq.com/h5/stats.js?v2.0.4";mta.setAttribute("name", "MTAH5");mta.setAttribute("sid", "500593083");mta.setAttribute("cid", "500593091");var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(mta, s);})();'
+  scrbox.innerHTML = 'var _mtac = {};(function() {var mta = document.createElement("script");mta.src = "https://pingjs.qq.com/h5/stats.js?v2.0.4";mta.setAttribute("name", "MTAH5");mta.setAttribute("sid", "500593083");mta.setAttribute("cid", "500593091");var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(mta, s);})();'
   var bodyBox = document.getElementsByTagName('body')[0]
   bodyBox.appendChild(scrbox)
 }
