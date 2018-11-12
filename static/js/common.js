@@ -32,9 +32,13 @@ var browser = {
 }
 //判断是否移动端
 if(browser.versions.mobile || browser.versions.android || browser.versions.ios) {} else {
-	window.location.href = 'http://007kq.com/' // production
+  var pcurl = window.location.href
+  if (pcurl.indexOf('m.')>=0){
+    pcurl = pcurl.replace('m.','')
+    window.location.href = pcurl
+  }
+	// window.location.href = 'http://007kq.com/' // production
 	// window.location.href = 'http://47.91.253.72:8080/' // test
-
 }
 
 if(getPara('title')) {
