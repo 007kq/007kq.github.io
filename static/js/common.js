@@ -60,10 +60,12 @@ function getPara(name) {
  s.parentNode.insertBefore(mta, s);
  })();
  */
+
 window.onload = function () {
+  var bodyBox = document.getElementsByTagName('body')[0]
+  // 腾讯统计
   var scrbox = document.createElement('script');
   scrbox.type = 'text/javascript'
-  scrbox.innerHTML = 'var _mtac = {};(function() {var mta = document.createElement("script");mta.src = "https://pingjs.qq.com/h5/stats.js?v2.0.4";mta.setAttribute("name", "MTAH5");mta.setAttribute("sid", "500593083");mta.setAttribute("cid", "500593091");var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(mta, s);})();'
-  var bodyBox = document.getElementsByTagName('body')[0]
+  scrbox.innerHTML = 'var _mtac = {};(function() {var mta = document.createElement("script");mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";mta.setAttribute("name", "MTAH5");mta.setAttribute("sid", "500593083");mta.setAttribute("cid", "500593091");var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(mta, s);})();'
   bodyBox.appendChild(scrbox)
 }
