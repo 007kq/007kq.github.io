@@ -36,33 +36,28 @@
   <a
     style="width: 100%;position: fixed;bottom: 0;left:0;z-index: 9999;"
     id="specialBan">
-    <video style="width: 100%;height: 2rem;object-fit:fill;" src="<%=data.video_url%>" x5-playsinline="true" playsinline="true" webkit-playsinline="true" poster="<%=data.image_url%>"></video>
+    <video muted autoplay="autoplay" style="width: 100%;height: 2rem;object-fit:fill;" src="<%=data.video_url%>" x5-playsinline="true" playsinline="true" webkit-playsinline="true" poster="<%=data.image_url%>"></video>
   </a>
 </script>
 <script type="text/javascript" src="//vijs.rayjump.com/bin/vijs.js" onload="Vijs.init(this);" sign="5d998f30a3aa6cb54dfb017972ead9d0" appid="107396"></script>
 <script type="text/javascript">
 if (window.browser.versions.ios || window.browser.versions.iPad) {
-
-} else {
-  window.onload = function () {
-    document.getElementById('specialBan').style.display = 'none'
-  }
-}
-if (window.Vijs) {
-  var myAd61316 = Vijs.setAD({
-    unitid: 61316,
-    view: 285,
-    placeholderid: 'ad_placeholder_61316',
-    autoplay: true,
-    loadedCallback: function() {
-      console.log('success');
-    },
-    customOpen: function () {
-      if (window.MtaH5) {
-        MtaH5.clickStat("videobanner")
+  if (window.Vijs) {
+    var myAd61316 = Vijs.setAD({
+      unitid: 61316,
+      view: 285,
+      placeholderid: 'ad_placeholder_61316',
+      autoplay: true,
+      loadedCallback: function() {
+        console.log('success');
+      },
+      customOpen: function () {
+        if (window.MtaH5) {
+          MtaH5.clickStat("videobanner")
+        }
       }
-    }
-  });
+    });
+  }
 }
 </script>
 <script type="text/javascript" src="./static/js/manifest.1442044d67caca41ce47.js?da1cd9c0d0953301116e"></script><script type="text/javascript" src="./static/js/vendor.c5ab38cec811af48e1de.js?da1cd9c0d0953301116e"></script><script type="text/javascript" src="./static/js/order.9e19cfa1b314ebf9ba38.js?da1cd9c0d0953301116e"></script></body>
