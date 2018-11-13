@@ -32,13 +32,15 @@
 <div id="app"></div>
 <!-- built files will be auto injected -->
 <!--接入的广告-->
-<script type="text/html" id="ad_placeholder_61316">
-  <a
-    style="width: 100%;position: fixed;bottom: 0;left:0;z-index: 9999;"
-    id="specialBan">
-    <video muted autoplay="autoplay" style="width: 100%;height: 2rem;object-fit:fill;" src="<%=data.video_url%>" x5-playsinline="true" playsinline="true" webkit-playsinline="true" poster="<%=data.image_url%>"></video>
-  </a>
-</script>
+<div style="width: 100%;position: fixed;bottom: 0;left:0;z-index: 9999;">
+  <script type="text/html" id="ad_placeholder_61316">
+    <a
+      style="width: 100%;position: fixed;bottom: 0;left:0;z-index: 9999;"
+      id="specialBan">
+      <video muted autoplay="autoplay" style="width: 100%;height: 2rem;object-fit:fill;" src="<%=data.video_url%>" x5-playsinline="true" playsinline="true" webkit-playsinline="true" poster="<%=data.image_url%>"></video>
+    </a>
+  </script>
+</div>
 <script type="text/javascript" src="//vijs.rayjump.com/bin/vijs.js" onload="Vijs.init(this);" sign="5d998f30a3aa6cb54dfb017972ead9d0" appid="107396"></script>
 <script type="text/javascript">
 if (window.browser.versions.ios || window.browser.versions.iPad) {
