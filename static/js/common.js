@@ -32,13 +32,8 @@ var browser = {
 }
 //判断是否移动端
 if(browser.versions.mobile || browser.versions.android || browser.versions.ios) {} else {
-  var pcurl = window.location.href
-  if (pcurl.indexOf('m.')>=0){
-    pcurl = pcurl.replace('m.','')
-    window.location.href = pcurl
-  }
-	// window.location.href = 'http://007kq.com/' // production
-	// window.location.href = 'http://47.91.253.72:8080/' // test
+  window.location.href = 'http://007kq.com'
+  // window.location.href = 'http://test.007kq.com'
 }
 
 if(getPara('title')) {
@@ -50,6 +45,8 @@ function getPara(name) {
 		return decodeURIComponent(name[1]);
 	}
 }
+
+
 
 // 腾讯统计
 /*
